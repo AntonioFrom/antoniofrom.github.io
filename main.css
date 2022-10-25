@@ -441,13 +441,20 @@ template {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/main.scss (2) ***!
   \*****************************************************************************************************************/
 * {
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  transition: .2 ease-in-out; }
 
 body {
   background: #080808;
   color: #fff;
   letter-spacing: 2px;
   min-height: 100%; }
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem; }
 
 html::-webkit-scrollbar {
   width: .8rem; }
@@ -859,7 +866,7 @@ legend {
       content: '';
       width: 100%;
       height: 100%;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 40%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
       transition: .3s; }
       @media (min-width: 1600px) {
         .card__thumb::after {
