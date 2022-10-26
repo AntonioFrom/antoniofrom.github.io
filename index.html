@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>Personal Portfolio</title>
-  <script defer="defer" src="vendors-node_modules_babel_polyfill_lib_index_js-node_modules_normalize_css_normalize_css-nod-60ec33.bundle.js"></script><script defer="defer" src="main.bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+  <script defer="defer" src="vendors-node_modules_babel_polyfill_lib_index_js-node_modules_normalize_css_normalize_css.bundle.js"></script><script defer="defer" src="main.bundle.js"></script><link href="main.css" rel="stylesheet"></head>
   <body>
     <header class="header-parallax">
       <div class="header-parallax__body">
@@ -96,8 +97,8 @@
     </section>
     <!-- ---------------------skills-------------------------- -->
     <section class="skills" id="skills">
-      <div class="skills__body">
-        <div class="_container">
+      <div class="_container">
+        <div class="skills__body">
           <div class="skills__container">
             <h1 class="skills__title">Skills</h1>
             <div class="skills__text-container">
@@ -150,7 +151,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="portfolio__body">
@@ -183,7 +184,7 @@
               <figure class="card__thumb">
                 <img src="img/site_screenshot_3.png" alt="site_3" class="card__image">
                 <figcaption class="card__caption">
-                  <h2 class="card__title">website for cofeeshop</h2>
+                  <h2 class="card__title">website for coffeeshop</h2>
                   <p class="card__snippet">this is one of my first works, and as they say, the first pancake is lumpy</p>
                   <a href="https://antoniofrom.github.io/coffee_website_JS_Html_Css/" target="_blank" class="card__button">Visit link</a>
                 </figcaption>
@@ -194,5 +195,49 @@
         </div>
       </div>
     </section>
+    <!-- ----------------------------contacts----------------------------------------------------------- -->
+    <section class="contact" id="contact">
+      <div class="contact__body">
+        <div class="_container">
+          <h1 class="contact__title">Contact</h1>
+          <div class="contact__container">
+            <div class="container-left">
+                <h1>Contact me</h1>
+                <a href="callto:+38068-300-18-20"><i class="fa-brands fa-telegram"></i>+38068-300-18-20</a>
+                <br>
+                <a href="mailto:antonguy@ukr.net"><i class="fa-solid fa-envelope"></i>antonguy@ukr.net</a>
+                <br>
+                <a href="https://github.com/AntonioFrom"><i class="fa-brands fa-square-github"></i>AntonioFrom</a>
+                <br>
+                <a href="https://antoniofrom.github.io/"><i class="fa-solid fa-globe"></i>www.antoniofrom.github.io</a>
+                <br>
+                <a><i class="fa-solid fa-location-dot"></i>Kharkiv,Ukraine</a>
+            </div>
+             <div class="container-right">
+                <div class="social-icons">
+                  <div>
+                  <a href="https://www.facebook.com/antuaneskoHai"><i class="fa-brands fa-facebook"></i></a>
+
+                  </div>
+                  <a href="https://www.instagram.com/hai_anton/"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://twitter.com/AntonHai5"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/anton-hai/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="download-cv">
+                  <div class="download-cv__image">
+                    <img class="image-cv" src="img/cv_preload.png" alt="cv">
+                    <div class="download-cv__button">
+                      <a class="button-cv" download href="img/cv_FrontendJS_Hai_Anton.pdf">Download CV</a>
+                    </div>
+                  </div>
+                </div>
+             </div>
+            
+            </div>
+          </div>
+        </div>
+      
+    </section>
+ 
   </body>
 </html>
