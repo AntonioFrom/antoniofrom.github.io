@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>Personal Portfolio</title>
-  <script defer="defer" src="vendors-node_modules_babel_polyfill_lib_index_js-node_modules_normalize_css_normalize_css.bundle.js"></script><script defer="defer" src="main.bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+    <title class="lang-title">Portfolio Tony Gaudi</title>
+  <script defer="defer" src="vendors-node_modules_babel_polyfill_lib_index_js.bundle.js"></script><script defer="defer" src="main.bundle.js"></script><script defer="defer" src="nextpage.bundle.js"></script><link href="main.css" rel="stylesheet"></head>
   <body>
-    <header class="header-parallax">
-      <div class="header-parallax__body">
+    <section class="header-parallax" id="home">
+      <header class="header-parallax__body">
         <div class="_container">
           <div class="header-parallax__text-container">
-            <div class="header-parallax__label">Frontend JS Developer</div>
-            <h1 class="header-parallax__title">
-              I'm <span>Tony.</span>gaudi <br>
-              from Ukraine
+            <!-- <div class="header-parallax__label">Frontend JS Developer</div> -->
+            <h1 class="lang-secondname header-parallax__title">
+              I'm <span>Tony.  </span>gaudi <br>
+              
             </h1>
+            <div class="mask">
+              <span class="lang-frontend" data-show>frontend</span>
+              <span class="lang-JS">JS developer.</span>
+              <span class="lang-react">react develover.</span>
+              <span class="lang-from">from Ukraine.</span>
+            </div>
           </div>
           <div class="header-parallax__images images-parallax">
             <div class="images-parallax__item">
@@ -30,8 +36,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </section>
 
     <!-- ---------------------about-------------------------- -->
     <section class="about" id="about">
@@ -145,19 +151,29 @@
     <!-- ---------------------portfolio-------------------------- -->
 
     <section class="portfolio" id="portfolio">
-      <nav class="navigation">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="header">
+        <nav class="header__navigation">
+          <ul>
+            <li><a class="lang-home" href="#home">Home</a></li>
+            <li><a class="lang-about" href="#about">About</a></li>
+            <li><a class="lang-skills" href="#skills">Skills</a></li>
+            <li><a class="lang-portfolio" href="#portfolio">Portfolio</a></li>
+            <li><a class="lang-contact" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header__icons">
+          <select class="header__site-language">
+            <option value="eng">eng</option>
+            <option value="ukr">ukr</option>
+           
+          </select>
+        </div>
+  
+      </div>
       <div class="portfolio__body">
         <div class="_container">
           <div class="portfolio__title">
-            <h1 class="title-portfolio">My Portfolio</h1>
+            <h1 class="lang-title title-portfolio">My Portfolio</h1>
           </div>
           <div class="portfolio__project">
             <div class="card">
@@ -197,6 +213,7 @@
     </section>
     <!-- ----------------------------contacts----------------------------------------------------------- -->
     <section class="contact" id="contact">
+     
       <div class="contact__body">
         <div class="_container">
           <h1 class="contact__title">Contact</h1>
