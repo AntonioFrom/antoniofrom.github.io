@@ -11,9 +11,41 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ "../node_modules/normalize.css/normalize.css");
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @styles/main.scss */ "./styles/main.scss");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "../node_modules/swiper/swiper.esm.js");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css */ "../node_modules/swiper/swiper.min.css");
 
 
 const langArr = __webpack_require__(/*! ./lang.js */ "./js/lang.js");
+
+
+const swiperRight = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"]('.swiperRight', {
+  // Optional parameters
+  direction: 'horizontal',
+  effect: "fade",
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 5,
+  modules: [swiper__WEBPACK_IMPORTED_MODULE_2__.Autoplay],
+  centeredSlides: true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false
+  }
+});
+const swiperLeft = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"]('.swiperLeft', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 10,
+  modules: [swiper__WEBPACK_IMPORTED_MODULE_2__.Autoplay],
+  centeredSlides: true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+    reverseDirection: true
+  }
+});
 let tabsLink = document.querySelectorAll('.about-row__tabs-link');
 let tabsItem = document.querySelectorAll('.about-row__tab-item');
 // let navbar = document.querySelector('.header__navigation')
@@ -34,7 +66,6 @@ function changeURLLanguage() {
   for (let key in langArr) {
     document.querySelector('.lang-' + key).innerHTML = langArr[key][hash];
     if (hash === 'ukr') {
-      console.log(hash);
       document.querySelector('.header .header__navigation ul').style.padding = '20px 51px';
       document.querySelector('.header .header__site-language').style.paddingRight = '51px';
       document.querySelector('.header-parallax__text-container .header-parallax__title').style.paddingRight = '90px';
@@ -166,7 +197,19 @@ const langArr = {
     'eng': 'About',
     'ukr': 'Про мене'
   },
+  about_2: {
+    'eng': 'About',
+    'ukr': 'Про мене'
+  },
+  about_title: {
+    'eng': 'About me',
+    'ukr': 'Про мене'
+  },
   skills: {
+    'eng': 'Skills',
+    'ukr': 'Навички'
+  },
+  skills_2: {
     'eng': 'Skills',
     'ukr': 'Навички'
   },
@@ -178,9 +221,21 @@ const langArr = {
     'eng': 'Contact',
     'ukr': 'Контакти'
   },
+  contact_2: {
+    'eng': 'Contact',
+    'ukr': 'Контакти'
+  },
+  contact_3: {
+    'eng': 'Contact me',
+    'ukr': `Зв'яжіться зі мною`
+  },
   title: {
     'eng': 'Portfolio Tony Gaudi',
     'ukr': 'Портфоліо Tony Gaudi'
+  },
+  title_2: {
+    'eng': 'Portfolio',
+    'ukr': 'Моє портфоліо'
   },
   secondname: {
     'eng': "I'm <span>Tony.  </span> gaudi",
@@ -201,369 +256,122 @@ const langArr = {
   from: {
     'eng': 'from Ukraine',
     'ukr': 'з України'
+  },
+  about_tab_2: {
+    'eng': 'Experience',
+    'ukr': 'Досвід'
+  },
+  about_tab_3: {
+    'eng': 'Education',
+    'ukr': 'Освіта'
+  },
+  about_me: {
+    'eng': `Hi. My name is Anton Hai. I am 39 years old and I decided to change my life and become a web developer. 
+        <br />"Starting life from scratch" is a very romanticized concept, but in fact, I had to put in a lot of effort to achieve
+         the result.
+        If you choose me as a programmer for your project or company, you will get an employee who knows how to achieve goals, is easily trained, has experience in various industries and professions. Download your resume in the contacts section.`,
+    'ukr': `Вітання. Мене звуть Антон Гай. Мені 39 років і я вирішив змінити своє життя та стати веб-розробником.<br /> "Почати життя з нуля" дуже романтизоване поняття, але насправді мені довелося докласти маси зусиль, щоб досягти результату.
+        Якщо ви оберете мене, як програміста, для свого проекту або компанії, ви отримаєте співробітника, який вміє досягати поставленої мети, легко навчаємо, має досвід роботи в різних галузях та професіях. Завантажуйте резюме у розділі контакти.`
+  },
+  experience_1: {
+    'eng': `KMD facade solutions/ Kharkiv Ukraine(2021-2022)</span
+        ><br />
+        SMM-specialist. Motion designer`,
+    'ukr': `КМД фасадні рішення/ Харків Україна(2021-2022)</span
+        ><br />
+        SMM-фахівець. Моушн дизайнер`
+  },
+  experience_2: {
+    'eng': `www.atlant-shop.com.ua/ Kharkiv Ukraine(2016-2022)</span
+        ><br />
+        Project manager. Content maker`,
+    'ukr': `www.atlant-shop.com.ua/ Харків Україна(2016-2022)</span
+        ><br />
+        Керівник проекту. Виробник контенту`
+  },
+  experience_3: {
+    'eng': `<span >Supermarket household appliances
+        "Foxtrot"(2008-2014)</span
+      ><br />
+      Head of department digital 
+    </li>`,
+    'ukr': ` <span >Супермаркет побутової техніки
+        "Фокстрот"/ Харків Україна(2008-2014)</span
+        ><br />
+        Начальник відділу цифрової техніки`
+  },
+  education: {
+    'eng': `<span> Kharkiv Institute of Business and
+        Management(2001-2006)</span
+      ><br />
+      Managment of organizations`,
+    'ukr': `<span> Харківський інститут бізнесу і
+        менеджменту(2001-2006)</span
+      ><br />
+      Менеджмент організацій`
+  },
+  eng: {
+    'eng': `eng`,
+    'ukr': `англ`
+  },
+  ukr: {
+    'eng': `ukr`,
+    'ukr': `укр`
+  },
+  portfolio_1: {
+    'eng': `website for a restaurant`,
+    'ukr': `веб-сайт для ресторану`
+  },
+  snippet_1: {
+    'eng': `- adaptive design<br>
+        - slider on the main page<br>
+        - definition of the page block in the nav menu`,
+    'ukr': `- адаптивний дизайн<br>
+        - слайдер на головній сторінці<br>
+        - визначення блоку сторінки в навігаційному меню`
+  },
+  link_1: {
+    'eng': `Visit link`,
+    'ukr': `Перейти ...`
+  },
+  portfolio_2: {
+    'eng': `a site for a freelancer`,
+    'ukr': `сайт для фрілансера`
+  },
+  snippet_2: {
+    'eng': `- adaptive design<br>
+        - slider on the main page<br>
+        - definition of the page block in the nav menu`,
+    'ukr': `- адаптивний дизайн<br>
+        - слайдер на головній сторінці<br>
+        - визначення блоку сторінки в навігаційному меню`
+  },
+  link_2: {
+    'eng': `Visit link`,
+    'ukr': `Перейти ...`
+  },
+  snippet_3: {
+    'eng': `- adaptive design<br>
+        - slider on the main page<br>
+        - definition of the page block in the nav menu`,
+    'ukr': `- адаптивний дизайн<br>
+        - слайдер на головній сторінці<br>
+        - визначення блоку сторінки в навігаційному меню`
+  },
+  link_3: {
+    'eng': `Visit link`,
+    'ukr': `Перейти ...`
+  },
+  portfolio_3: {
+    'eng': `coffee shop website`,
+    'ukr': `сайт продажу кави`
+  },
+  adress: {
+    'eng': `<i class="fa-solid fa-location-dot"></i>Kharkiv, Ukraine`,
+    'ukr': `<i class="fa-solid fa-location-dot"></i>Харків, Україна`
   }
 };
 module.exports = langArr;
-
-/***/ }),
-
-/***/ "../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js":
-/*!********************************************************************************!*\
-  !*** ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js ***!
-  \********************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-
-/* eslint-env browser */
-
-/*
-  eslint-disable
-  no-console,
-  func-names
-*/
-
-/** @typedef {any} TODO */
-var normalizeUrl = __webpack_require__(/*! ./normalize-url */ "../node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js");
-
-var srcByModuleId = Object.create(null);
-var noDocument = typeof document === "undefined";
-var forEach = Array.prototype.forEach;
-/**
- * @param {function} fn
- * @param {number} time
- * @returns {(function(): void)|*}
- */
-
-function debounce(fn, time) {
-  var timeout = 0;
-  return function () {
-    // @ts-ignore
-    var self = this; // eslint-disable-next-line prefer-rest-params
-
-    var args = arguments;
-
-    var functionCall = function functionCall() {
-      return fn.apply(self, args);
-    };
-
-    clearTimeout(timeout); // @ts-ignore
-
-    timeout = setTimeout(functionCall, time);
-  };
-}
-
-function noop() {}
-/**
- * @param {TODO} moduleId
- * @returns {TODO}
- */
-
-
-function getCurrentScriptUrl(moduleId) {
-  var src = srcByModuleId[moduleId];
-
-  if (!src) {
-    if (document.currentScript) {
-      src =
-      /** @type {HTMLScriptElement} */
-      document.currentScript.src;
-    } else {
-      var scripts = document.getElementsByTagName("script");
-      var lastScriptTag = scripts[scripts.length - 1];
-
-      if (lastScriptTag) {
-        src = lastScriptTag.src;
-      }
-    }
-
-    srcByModuleId[moduleId] = src;
-  }
-  /**
-   * @param {string} fileMap
-   * @returns {null | string[]}
-   */
-
-
-  return function (fileMap) {
-    if (!src) {
-      return null;
-    }
-
-    var splitResult = src.split(/([^\\/]+)\.js$/);
-    var filename = splitResult && splitResult[1];
-
-    if (!filename) {
-      return [src.replace(".js", ".css")];
-    }
-
-    if (!fileMap) {
-      return [src.replace(".js", ".css")];
-    }
-
-    return fileMap.split(",").map(function (mapRule) {
-      var reg = new RegExp("".concat(filename, "\\.js$"), "g");
-      return normalizeUrl(src.replace(reg, "".concat(mapRule.replace(/{fileName}/g, filename), ".css")));
-    });
-  };
-}
-/**
- * @param {TODO} el
- * @param {string} [url]
- */
-
-
-function updateCss(el, url) {
-  if (!url) {
-    if (!el.href) {
-      return;
-    } // eslint-disable-next-line
-
-
-    url = el.href.split("?")[0];
-  }
-
-  if (!isUrlRequest(
-  /** @type {string} */
-  url)) {
-    return;
-  }
-
-  if (el.isLoaded === false) {
-    // We seem to be about to replace a css link that hasn't loaded yet.
-    // We're probably changing the same file more than once.
-    return;
-  }
-
-  if (!url || !(url.indexOf(".css") > -1)) {
-    return;
-  } // eslint-disable-next-line no-param-reassign
-
-
-  el.visited = true;
-  var newEl = el.cloneNode();
-  newEl.isLoaded = false;
-  newEl.addEventListener("load", function () {
-    if (newEl.isLoaded) {
-      return;
-    }
-
-    newEl.isLoaded = true;
-    el.parentNode.removeChild(el);
-  });
-  newEl.addEventListener("error", function () {
-    if (newEl.isLoaded) {
-      return;
-    }
-
-    newEl.isLoaded = true;
-    el.parentNode.removeChild(el);
-  });
-  newEl.href = "".concat(url, "?").concat(Date.now());
-
-  if (el.nextSibling) {
-    el.parentNode.insertBefore(newEl, el.nextSibling);
-  } else {
-    el.parentNode.appendChild(newEl);
-  }
-}
-/**
- * @param {string} href
- * @param {TODO} src
- * @returns {TODO}
- */
-
-
-function getReloadUrl(href, src) {
-  var ret; // eslint-disable-next-line no-param-reassign
-
-  href = normalizeUrl(href);
-  src.some(
-  /**
-   * @param {string} url
-   */
-  // eslint-disable-next-line array-callback-return
-  function (url) {
-    if (href.indexOf(src) > -1) {
-      ret = url;
-    }
-  });
-  return ret;
-}
-/**
- * @param {string} [src]
- * @returns {boolean}
- */
-
-
-function reloadStyle(src) {
-  if (!src) {
-    return false;
-  }
-
-  var elements = document.querySelectorAll("link");
-  var loaded = false;
-  forEach.call(elements, function (el) {
-    if (!el.href) {
-      return;
-    }
-
-    var url = getReloadUrl(el.href, src);
-
-    if (!isUrlRequest(url)) {
-      return;
-    }
-
-    if (el.visited === true) {
-      return;
-    }
-
-    if (url) {
-      updateCss(el, url);
-      loaded = true;
-    }
-  });
-  return loaded;
-}
-
-function reloadAll() {
-  var elements = document.querySelectorAll("link");
-  forEach.call(elements, function (el) {
-    if (el.visited === true) {
-      return;
-    }
-
-    updateCss(el);
-  });
-}
-/**
- * @param {string} url
- * @returns {boolean}
- */
-
-
-function isUrlRequest(url) {
-  // An URL is not an request if
-  // It is not http or https
-  if (!/^[a-zA-Z][a-zA-Z\d+\-.]*:/.test(url)) {
-    return false;
-  }
-
-  return true;
-}
-/**
- * @param {TODO} moduleId
- * @param {TODO} options
- * @returns {TODO}
- */
-
-
-module.exports = function (moduleId, options) {
-  if (noDocument) {
-    console.log("no window.document found, will not HMR CSS");
-    return noop;
-  }
-
-  var getScriptSrc = getCurrentScriptUrl(moduleId);
-
-  function update() {
-    var src = getScriptSrc(options.filename);
-    var reloaded = reloadStyle(src);
-
-    if (options.locals) {
-      console.log("[HMR] Detected local css modules. Reload all css");
-      reloadAll();
-      return;
-    }
-
-    if (reloaded) {
-      console.log("[HMR] css reload %s", src.join(" "));
-    } else {
-      console.log("[HMR] Reload all css");
-      reloadAll();
-    }
-  }
-
-  return debounce(update, 50);
-};
-
-/***/ }),
-
-/***/ "../node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js":
-/*!*************************************************************************!*\
-  !*** ../node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js ***!
-  \*************************************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-/* eslint-disable */
-
-/**
- * @param {string[]} pathComponents
- * @returns {string}
- */
-function normalizeUrl(pathComponents) {
-  return pathComponents.reduce(function (accumulator, item) {
-    switch (item) {
-      case "..":
-        accumulator.pop();
-        break;
-
-      case ".":
-        break;
-
-      default:
-        accumulator.push(item);
-    }
-
-    return accumulator;
-  },
-  /** @type {string[]} */
-  []).join("/");
-}
-/**
- * @param {string} urlString
- * @returns {string}
- */
-
-
-module.exports = function (urlString) {
-  urlString = urlString.trim();
-
-  if (/^data:/i.test(urlString)) {
-    return urlString;
-  }
-
-  var protocol = urlString.indexOf("//") !== -1 ? urlString.split("//")[0] + "//" : "";
-  var components = urlString.replace(new RegExp(protocol, "i"), "").split("/");
-  var host = components[0].toLowerCase().replace(/\.$/, "");
-  components[0] = "";
-  var path = normalizeUrl(components);
-  return protocol + host + path;
-};
-
-/***/ }),
-
-/***/ "../node_modules/normalize.css/normalize.css":
-/*!***************************************************!*\
-  !*** ../node_modules/normalize.css/normalize.css ***!
-  \***************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-    if(true) {
-      // 1666917186550
-      var cssReload = __webpack_require__(/*! ../mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
-      module.hot.dispose(cssReload);
-      module.hot.accept(undefined, cssReload);
-    }
-  
 
 /***/ }),
 
@@ -578,7 +386,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1666917186919
+      // 1667172012602
       var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -664,6 +472,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/get javascript update chunk filename */
 /******/ 	(() => {
 /******/ 		// This function allow to reference all chunks
@@ -689,7 +509,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("278c0379ec0eec08563b")
+/******/ 		__webpack_require__.h = () => ("62f10b979638ea077b2a")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -1814,8 +1634,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	__webpack_require__.O(undefined, ["vendors-node_modules_babel_polyfill_lib_index_js"], () => (__webpack_require__("../node_modules/@babel/polyfill/lib/index.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_babel_polyfill_lib_index_js"], () => (__webpack_require__("./js/index.js")))
+/******/ 	__webpack_require__.O(undefined, ["vendors-node_modules_babel_polyfill_lib_index_js","vendors-node_modules_normalize_css_normalize_css-node_modules_swiper_swiper_min_css-node_modu-ac64cb"], () => (__webpack_require__("../node_modules/@babel/polyfill/lib/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_babel_polyfill_lib_index_js","vendors-node_modules_normalize_css_normalize_css-node_modules_swiper_swiper_min_css-node_modu-ac64cb"], () => (__webpack_require__("./js/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

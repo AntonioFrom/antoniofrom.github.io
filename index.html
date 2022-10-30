@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <title class="lang-title">Portfolio Tony Gaudi</title>
-  <script defer="defer" src="vendors-node_modules_babel_polyfill_lib_index_js.bundle.js"></script><script defer="defer" src="main.bundle.js"></script><script defer="defer" src="nextpage.bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+  <script defer="defer" src="vendors-node_modules_babel_polyfill_lib_index_js.bundle.js"></script><script defer="defer" src="vendors-node_modules_normalize_css_normalize_css-node_modules_swiper_swiper_min_css-node_modu-ac64cb.bundle.js"></script><script defer="defer" src="main.bundle.js"></script><script defer="defer" src="nextpage.bundle.js"></script><link href="vendors-node_modules_normalize_css_normalize_css-node_modules_swiper_swiper_min_css-node_modu-ac64cb.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
   <body>
     <section class="header-parallax" id="home">
       <header class="header-parallax__body">
@@ -14,8 +14,7 @@
           <div class="header-parallax__text-container">
             <!-- <div class="header-parallax__label">Frontend JS Developer</div> -->
             <h1 class="lang-secondname header-parallax__title">
-              I'm <span>Tony.  </span>gaudi <br>
-              
+              I'm <span>Tony. </span>gaudi <br>
             </h1>
             <div class="mask">
               <span class="lang-frontend" data-show>frontend</span>
@@ -42,18 +41,20 @@
     <!-- ---------------------about-------------------------- -->
     <section class="about" id="about">
       <div class="_container">
+        <h1 class="lang-about_title about-row__title">About me</h1>
         <div class="about-row">
           <div class="about-row__col-1">
             <img src="img/photo_for_site.jpg" alt="">
           </div>
           <div class="about-row__col-2">
-            <h1 class="about-row__title">About me</h1>
             <div class="about-row__tabs-nav">
-              <p class="about-row__tabs-link" data-tab="#aboutme">About</p>
-              <p class="about-row__tabs-link" data-tab="#experience">
+              <p class="lang-about about-row__tabs-link" data-tab="#aboutme">
+                About
+              </p>
+              <p class="lang-about_tab_2 about-row__tabs-link" data-tab="#experience">
                 Experience
               </p>
-              <p class="about-row__tabs-link" data-tab="#education">
+              <p class="lang-about_tab_3 about-row__tabs-link" data-tab="#education">
                 Education
               </p>
             </div>
@@ -61,38 +62,44 @@
               <div class="about-row__tab-item" id="aboutme">
                 <ul>
                   <li>
-                    <p>
-                      I am begginer Frontend Javascript Developer, who is
-                      looking for challenge and amazing projects. I can quickly
-                      learn and understand new direction. I am sociable,
-                      creative and organized.
+                    <p class="lang-about_me">
+                      Hi. My name is Anton Hai. I am 39 years old and I decided
+                      to change my life and become a web developer.<br>
+                      "Starting life from scratch" is a very romanticized
+                      concept, but in fact, I had to put in a lot of effort to
+                      achieve the result. If you choose me as a programmer for
+                      your project or company, you will get an employee who
+                      knows how to achieve goals, is easily trained, has
+                      experience in various industries and professions. Download
+                      your resume in the contacts section.
                     </p>
                   </li>
                 </ul>
               </div>
               <div class="about-row__tab-item" id="experience">
                 <ul>
-                  <li>
+                  <li class="lang-experience_1">
                     <span>KMD facade solutions/ Kharkiv Ukraine(2021-2022)</span><br>
-                    SPECIALIST. MOTION DESIGNER
+                    SMM-specialist. Motion designer<br>
                   </li>
-                  <li>
+                  <li class="lang-experience_2">
                     <span>www.atlant-shop.com.ua/ Kharkiv Ukraine(2016-2022)</span><br>
-                    PROJECT MANAGER. CONTENT MAKER
+                    Project manager. Content maker
+                    <hr>
                   </li>
-                  <li>
+                  <li class="lang-experience_3">
                     <span>Supermarket household appliances
                       "Foxtrot"(2008-2014)</span><br>
-                    HEAD OF SALES DEPARTMENT
+                    Head of sales department
                   </li>
                 </ul>
               </div>
               <div class="about-row__tab-item" id="education">
                 <ul>
-                  <li>
+                  <li class="lang-education">
                     <span>Kharkiv Institute of Business and
                       Management(2001-2006)</span><br>
-                    MANAGMENT OF ORGANIZATIONS
+                    Managment of organizations
                   </li>
                 </ul>
               </div>
@@ -105,43 +112,75 @@
     <section class="skills" id="skills">
       <div class="_container">
         <div class="skills__body">
+          <div class="lang-skills_hard text1">Hard</div>
+          <div class="lang-skills_hard text2">Soft</div>
           <div class="skills__container">
-            <h1 class="skills__title">Skills</h1>
+            <h1 class="lang-skills skills__title">Skills</h1>
             <div class="skills__text-container">
               <div class="text-label__hard-skills">
-                <div class="text1">Hard</div>
-                <div class="skills__hard-carousel">
-                  <div class="hard__carousel-item">
-                    <img src="img/pngegg (6).png" alt="">
-                  </div>
-                  <div class="hard__carousel-item">
-                    <img src="img/pngegg (7).png" alt="">
-                  </div>
-                  <div class="hard__carousel-item">
-                    <img src="img/pngegg (8).png" alt="">
-                  </div>
-                  <div class="hard__carousel-item">
-                    <img src="img/pngegg (6).png" alt="">
+
+                <div class="swiperRight">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/react.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/bootstrap.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/css.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/git.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/html.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/js.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/node.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/sass.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/webpack.png" alt="">
+                    </div>
+                   
                   </div>
                 </div>
               </div>
               <div class="text-label__soft-skills">
-                <div class="skills__soft-carousel">
-                  <div class="soft__carousel-item">
-                    <img src="img/pngegg (6).png" alt="">
-                  </div>
-                  <div class="soft__carousel-item">
-                    <img src="img/pngegg (7).png" alt="">
-                  </div>
-                  <div class="soft__carousel-item">
-                    <img src="img/pngegg (8).png" alt="">
-                  </div>
-                  <div class="soft__carousel-item">
-                    <img src="img/pngegg (6).png" alt="">
+                <div class="swiperLeft">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      
+                      <img src="img/Communication.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      
+                      <img src="img/Googling.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      
+                      <img src="img/Intermediate.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      
+                      <img src="img/Leadership.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      
+                      <img src="img/ProblemSolving.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      
+                      <img src="img/Stress_resistance.png" alt="">
+                    </div>
                   </div>
                 </div>
-
-                <h1 class="text2">Soft</h1>
               </div>
             </div>
           </div>
@@ -155,34 +194,36 @@
         <nav class="header__navigation">
           <ul>
             <li><a class="lang-home" href="#home">Home</a></li>
-            <li><a class="lang-about" href="#about">About</a></li>
-            <li><a class="lang-skills" href="#skills">Skills</a></li>
+            <li><a class="lang-about_2" href="#about">About</a></li>
+            <li><a class="lang-skills_2" href="#skills">Skills</a></li>
             <li><a class="lang-portfolio" href="#portfolio">Portfolio</a></li>
             <li><a class="lang-contact" href="#contact">Contact</a></li>
           </ul>
         </nav>
         <div class="header__icons">
           <select class="header__site-language">
-            <option value="eng">eng</option>
-            <option value="ukr">ukr</option>
-           
+            <option class="lang-eng" value="eng">eng</option>
+            <option class="lang-ukr" value="ukr">ukr</option>
           </select>
         </div>
-  
       </div>
       <div class="portfolio__body">
         <div class="_container">
           <div class="portfolio__title">
-            <h1 class="lang-title title-portfolio">My Portfolio</h1>
+            <h1 class="lang-title_2 title-portfolio">My Portfolio</h1>
           </div>
           <div class="portfolio__project">
             <div class="card">
               <figure class="card__thumb">
                 <img src="img/site_screenshot_2.png" alt="site_1" class="card__image">
                 <figcaption class="card__caption">
-                  <h2 class="card__title">website for restoraunt</h2>
-                  <p class="card__snippet">this is one of my first works, and as they say, the first pancake is lumpy</p>
-                  <a href="https://antoniofrom.github.io/restoraunt_website_html_js_css3/" target="_blank" class="card__button">Visit link</a>
+                  <h2 class="lang-portfolio_1 card__title">website for a restaurant</h2>
+                  <p class="lang-snippet_1 card__snippet">
+                    - adaptive design <br>
+                    - slider on the main page <br>
+                    - definition of the page block in the nav menu
+                  </p>
+                  <a href="https://antoniofrom.github.io/restoraunt_website_html_js_css3/" target="_blank" class="lang-link_1 card__button">Visit link</a>
                 </figcaption>
               </figure>
             </div>
@@ -190,9 +231,13 @@
               <figure class="card__thumb">
                 <img src="img/site_screenshot_1.png" alt="site_2" class="card__image">
                 <figcaption class="card__caption">
-                  <h2 class="card__title">website for freelancer</h2>
-                  <p class="card__snippet">this is one of my first works, and as they say, the first pancake is lumpy</p>
-                  <a href="https://antoniofrom.github.io/site-portfolio-for-freelancer-html-css-js/" target="_blank" class="card__button">Visit link</a>
+                  <h2 class="lang-portfolio_2 card__title">website for freelancer</h2>
+                  <p class="lang-snippet_2 card__snippet">
+                    - adaptive design <br>
+                    - slider on the main page <br>
+                    - definition of the page block in the nav menu
+                  </p>
+                  <a href="https://antoniofrom.github.io/site-portfolio-for-freelancer-html-css-js/" target="_blank" class="lang-link_2 card__button">Visit link</a>
                 </figcaption>
               </figure>
             </div>
@@ -200,61 +245,59 @@
               <figure class="card__thumb">
                 <img src="img/site_screenshot_3.png" alt="site_3" class="card__image">
                 <figcaption class="card__caption">
-                  <h2 class="card__title">website for coffeeshop</h2>
-                  <p class="card__snippet">this is one of my first works, and as they say, the first pancake is lumpy</p>
-                  <a href="https://antoniofrom.github.io/coffee_website_JS_Html_Css/" target="_blank" class="card__button">Visit link</a>
+                  <h2 class="lang-portfolio_3 card__title">website for coffeeshop</h2>
+                  <p class="lang-snippet_3 card__snippet">
+                    - adaptive design <br>
+                    - slider on the main page <br>
+                    - definition of the page block in the nav menu
+                  </p>
+                  <a href="https://antoniofrom.github.io/coffee_website_JS_Html_Css/" target="_blank" class="lang-link_3 card__button">Visit link</a>
                 </figcaption>
               </figure>
             </div>
-            
           </div>
         </div>
       </div>
     </section>
     <!-- ----------------------------contacts----------------------------------------------------------- -->
     <section class="contact" id="contact">
-     
       <div class="contact__body">
         <div class="_container">
-          <h1 class="contact__title">Contact</h1>
+          <h1 class="lang-contact_2 contact__title">Contact</h1>
           <div class="contact__container">
             <div class="container-left">
-                <h1>Contact me</h1>
-                <a href="callto:+38068-300-18-20"><i class="fa-brands fa-telegram"></i>+38068-300-18-20</a>
-                <br>
-                <a href="mailto:antonguy@ukr.net"><i class="fa-solid fa-envelope"></i>antonguy@ukr.net</a>
-                <br>
-                <a href="https://github.com/AntonioFrom"><i class="fa-brands fa-square-github"></i>AntonioFrom</a>
-                <br>
-                <a href="https://antoniofrom.github.io/"><i class="fa-solid fa-globe"></i>www.antoniofrom.github.io</a>
-                <br>
-                <a><i class="fa-solid fa-location-dot"></i>Kharkiv,Ukraine</a>
+              <h1 class="lang-contact_3">Contact me</h1>
+              <a href="callto:+38068-300-18-20"><i class="fa-brands fa-telegram"></i>+38068-300-18-20</a>
+              <br>
+              <a href="mailto:antonguy@ukr.net"><i class="fa-solid fa-envelope"></i>antonguy@ukr.net</a>
+              <br>
+              <a href="https://github.com/AntonioFrom"><i class="fa-brands fa-square-github"></i>AntonioFrom</a>
+              <br>
+              <a href="https://antoniofrom.github.io/"><i class="fa-solid fa-globe"></i>www.antoniofrom.github.io</a>
+              <br>
+              <a class="lang-adress"><i class="fa-solid fa-location-dot"></i>Kharkiv, Ukraine</a>
             </div>
-             <div class="container-right">
-                <div class="social-icons">
-                  <div>
-                  <a href="https://www.facebook.com/antuaneskoHai"><i class="fa-brands fa-facebook"></i></a>
-
-                  </div>
-                  <a href="https://www.instagram.com/hai_anton/"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="https://twitter.com/AntonHai5"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="https://www.linkedin.com/in/anton-hai/"><i class="fa-brands fa-linkedin"></i></a>
+            <div class="container-right">
+              <div class="social-icons">
+                <div>
+                  <a href="https://www.facebook.com/antuaneskoHai"><i class="fa-brands fa-facebook"></i>@antuaneskoHai </a>
                 </div>
-                <div class="download-cv">
-                  <div class="download-cv__image">
-                    <img class="image-cv" src="img/cv_preload.png" alt="cv">
-                    <div class="download-cv__button">
-                      <a class="button-cv" download href="img/cv_FrontendJS_Hai_Anton.pdf">Download CV</a>
-                    </div>
+                <a href="https://www.instagram.com/hai_anton/"><i class="fa-brands fa-instagram"></i>@hai_anton</a>
+                <a href="https://twitter.com/AntonHai5"><i class="fa-brands fa-twitter"></i>@AntonHai5</a>
+                <a href="https://www.linkedin.com/in/anton-hai/"><i class="fa-brands fa-linkedin"></i>@anton-hai</a>
+              </div>
+              <div class="download-cv">
+                <div class="download-cv__image">
+                  <img class="image-cv" src="img/cv_preload.png" alt="cv">
+                  <div class="download-cv__button">
+                    <a class="button-cv" download href="img/cv_FrontendJS_Hai_Anton.pdf">Download CV</a>
                   </div>
                 </div>
-             </div>
-            
+              </div>
             </div>
           </div>
         </div>
-      
+      </div>
     </section>
- 
   </body>
 </html>

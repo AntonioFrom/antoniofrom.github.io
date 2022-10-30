@@ -16,7 +16,19 @@ const langArr = {
     'eng': 'About',
     'ukr': 'Про мене'
   },
+  about_2: {
+    'eng': 'About',
+    'ukr': 'Про мене'
+  },
+  about_title: {
+    'eng': 'About me',
+    'ukr': 'Про мене'
+  },
   skills: {
+    'eng': 'Skills',
+    'ukr': 'Навички'
+  },
+  skills_2: {
     'eng': 'Skills',
     'ukr': 'Навички'
   },
@@ -28,9 +40,21 @@ const langArr = {
     'eng': 'Contact',
     'ukr': 'Контакти'
   },
+  contact_2: {
+    'eng': 'Contact',
+    'ukr': 'Контакти'
+  },
+  contact_3: {
+    'eng': 'Contact me',
+    'ukr': `Зв'яжіться зі мною`
+  },
   title: {
     'eng': 'Portfolio Tony Gaudi',
     'ukr': 'Портфоліо Tony Gaudi'
+  },
+  title_2: {
+    'eng': 'Portfolio',
+    'ukr': 'Моє портфоліо'
   },
   secondname: {
     'eng': "I'm <span>Tony.  </span> gaudi",
@@ -51,6 +75,119 @@ const langArr = {
   from: {
     'eng': 'from Ukraine',
     'ukr': 'з України'
+  },
+  about_tab_2: {
+    'eng': 'Experience',
+    'ukr': 'Досвід'
+  },
+  about_tab_3: {
+    'eng': 'Education',
+    'ukr': 'Освіта'
+  },
+  about_me: {
+    'eng': `Hi. My name is Anton Hai. I am 39 years old and I decided to change my life and become a web developer. 
+        <br />"Starting life from scratch" is a very romanticized concept, but in fact, I had to put in a lot of effort to achieve
+         the result.
+        If you choose me as a programmer for your project or company, you will get an employee who knows how to achieve goals, is easily trained, has experience in various industries and professions. Download your resume in the contacts section.`,
+    'ukr': `Вітання. Мене звуть Антон Гай. Мені 39 років і я вирішив змінити своє життя та стати веб-розробником.<br /> "Почати життя з нуля" дуже романтизоване поняття, але насправді мені довелося докласти маси зусиль, щоб досягти результату.
+        Якщо ви оберете мене, як програміста, для свого проекту або компанії, ви отримаєте співробітника, який вміє досягати поставленої мети, легко навчаємо, має досвід роботи в різних галузях та професіях. Завантажуйте резюме у розділі контакти.`
+  },
+  experience_1: {
+    'eng': `KMD facade solutions/ Kharkiv Ukraine(2021-2022)</span
+        ><br />
+        SMM-specialist. Motion designer`,
+    'ukr': `КМД фасадні рішення/ Харків Україна(2021-2022)</span
+        ><br />
+        SMM-фахівець. Моушн дизайнер`
+  },
+  experience_2: {
+    'eng': `www.atlant-shop.com.ua/ Kharkiv Ukraine(2016-2022)</span
+        ><br />
+        Project manager. Content maker`,
+    'ukr': `www.atlant-shop.com.ua/ Харків Україна(2016-2022)</span
+        ><br />
+        Керівник проекту. Виробник контенту`
+  },
+  experience_3: {
+    'eng': `<span >Supermarket household appliances
+        "Foxtrot"(2008-2014)</span
+      ><br />
+      Head of department digital 
+    </li>`,
+    'ukr': ` <span >Супермаркет побутової техніки
+        "Фокстрот"/ Харків Україна(2008-2014)</span
+        ><br />
+        Начальник відділу цифрової техніки`
+  },
+  education: {
+    'eng': `<span> Kharkiv Institute of Business and
+        Management(2001-2006)</span
+      ><br />
+      Managment of organizations`,
+    'ukr': `<span> Харківський інститут бізнесу і
+        менеджменту(2001-2006)</span
+      ><br />
+      Менеджмент організацій`
+  },
+  eng: {
+    'eng': `eng`,
+    'ukr': `англ`
+  },
+  ukr: {
+    'eng': `ukr`,
+    'ukr': `укр`
+  },
+  portfolio_1: {
+    'eng': `website for a restaurant`,
+    'ukr': `веб-сайт для ресторану`
+  },
+  snippet_1: {
+    'eng': `- adaptive design<br>
+        - slider on the main page<br>
+        - definition of the page block in the nav menu`,
+    'ukr': `- адаптивний дизайн<br>
+        - слайдер на головній сторінці<br>
+        - визначення блоку сторінки в навігаційному меню`
+  },
+  link_1: {
+    'eng': `Visit link`,
+    'ukr': `Перейти ...`
+  },
+  portfolio_2: {
+    'eng': `a site for a freelancer`,
+    'ukr': `сайт для фрілансера`
+  },
+  snippet_2: {
+    'eng': `- adaptive design<br>
+        - slider on the main page<br>
+        - definition of the page block in the nav menu`,
+    'ukr': `- адаптивний дизайн<br>
+        - слайдер на головній сторінці<br>
+        - визначення блоку сторінки в навігаційному меню`
+  },
+  link_2: {
+    'eng': `Visit link`,
+    'ukr': `Перейти ...`
+  },
+  snippet_3: {
+    'eng': `- adaptive design<br>
+        - slider on the main page<br>
+        - definition of the page block in the nav menu`,
+    'ukr': `- адаптивний дизайн<br>
+        - слайдер на головній сторінці<br>
+        - визначення блоку сторінки в навігаційному меню`
+  },
+  link_3: {
+    'eng': `Visit link`,
+    'ukr': `Перейти ...`
+  },
+  portfolio_3: {
+    'eng': `coffee shop website`,
+    'ukr': `сайт продажу кави`
+  },
+  adress: {
+    'eng': `<i class="fa-solid fa-location-dot"></i>Kharkiv, Ukraine`,
+    'ukr': `<i class="fa-solid fa-location-dot"></i>Харків, Україна`
   }
 };
 module.exports = langArr;
@@ -159,7 +296,7 @@ module.exports = langArr;
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("278c0379ec0eec08563b")
+/******/ 		__webpack_require__.h = () => ("62f10b979638ea077b2a")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
