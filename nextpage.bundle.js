@@ -61,20 +61,20 @@ const langArr = {
     'ukr': 'Я <span>Tony.  </span> gaudi'
   },
   frontend: {
-    'eng': 'frontend',
-    'ukr': 'фронтенд'
+    'eng': 'Frontend',
+    'ukr': 'Фронтенд'
   },
   JS: {
-    'eng': 'JS developer.',
-    'ukr': 'JS розробник.'
+    'eng': 'JS developer',
+    'ukr': 'JS розробник'
   },
   react: {
-    'eng': 'react develover.',
-    'ukr': 'react розробник.'
+    'eng': 'React developer',
+    'ukr': 'React розробник'
   },
   from: {
-    'eng': 'from Ukraine',
-    'ukr': 'з України'
+    'eng': 'From Ukraine',
+    'ukr': 'З України'
   },
   about_tab_2: {
     'eng': 'Experience',
@@ -296,7 +296,7 @@ module.exports = langArr;
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("62f10b979638ea077b2a")
+/******/ 		__webpack_require__.h = () => ("6755f93e39d321838ad6")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

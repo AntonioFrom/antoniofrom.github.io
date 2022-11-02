@@ -25,8 +25,26 @@ const swiperRight = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"]('.swiperR
   loop: true,
   slidesPerView: 5,
   spaceBetween: 5,
+  breakpoints: {
+    280: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 15
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 15
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 15
+    }
+  },
   modules: [swiper__WEBPACK_IMPORTED_MODULE_2__.Autoplay],
-  centeredSlides: true,
+  // centeredSlides: true,
   autoplay: {
     delay: 1500,
     disableOnInteraction: false
@@ -39,7 +57,25 @@ const swiperLeft = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"]('.swiperLe
   slidesPerView: 5,
   spaceBetween: 10,
   modules: [swiper__WEBPACK_IMPORTED_MODULE_2__.Autoplay],
-  centeredSlides: true,
+  // centeredSlides: true,
+  breakpoints: {
+    280: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 15
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 10
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 15
+    }
+  },
   autoplay: {
     delay: 1500,
     disableOnInteraction: false,
@@ -48,11 +84,28 @@ const swiperLeft = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"]('.swiperLe
 });
 let tabsLink = document.querySelectorAll('.about-row__tabs-link');
 let tabsItem = document.querySelectorAll('.about-row__tab-item');
-// let navbar = document.querySelector('.header__navigation')
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.header__navigation ul li a');
+let navbar = document.querySelector('.header .header__navigation ul');
+let menu = document.querySelector('#menu-bars');
 const selectLang = document.querySelector('select');
 const allLang = ['eng', 'ukr'];
+
+// window.addEventListener('resize', onResize, {passive: true})
+
+// function onResize(){
+//     if(window.innerHeight >=1200) {
+//         document.querySelector('.header .header__navigation ul.active').style.flexDirection = 'row'
+//         navbar.classList.remove('active') 
+//         // console.log(document.querySelector('.header-parallax__text-container'));
+//     }
+// }
+// onResize()
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
+});
 selectLang.addEventListener('change', changeURLLanguage);
 function changeURLLanguage() {
   let lang = selectLang.value;
@@ -68,7 +121,7 @@ function changeURLLanguage() {
     if (hash === 'ukr') {
       document.querySelector('.header .header__navigation ul').style.padding = '20px 51px';
       document.querySelector('.header .header__site-language').style.paddingRight = '51px';
-      document.querySelector('.header-parallax__text-container .header-parallax__title').style.paddingRight = '90px';
+      document.querySelector('.header-parallax__text-container .header-parallax__title').style.paddingRight = '115px';
     } else {
       document.querySelector('.header .header__navigation ul').style.padding = '20px 100px';
       document.querySelector('.header .header__site-language').style.paddingRight = '100px';
@@ -77,6 +130,8 @@ function changeURLLanguage() {
   }
 }
 window.onscroll = () => {
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
   section.forEach(section => {
     let top = window.scrollY;
     let height = section.offsetHeight;
@@ -242,20 +297,20 @@ const langArr = {
     'ukr': 'Я <span>Tony.  </span> gaudi'
   },
   frontend: {
-    'eng': 'frontend',
-    'ukr': 'фронтенд'
+    'eng': 'Frontend',
+    'ukr': 'Фронтенд'
   },
   JS: {
-    'eng': 'JS developer.',
-    'ukr': 'JS розробник.'
+    'eng': 'JS developer',
+    'ukr': 'JS розробник'
   },
   react: {
-    'eng': 'react develover.',
-    'ukr': 'react розробник.'
+    'eng': 'React developer',
+    'ukr': 'React розробник'
   },
   from: {
-    'eng': 'from Ukraine',
-    'ukr': 'з України'
+    'eng': 'From Ukraine',
+    'ukr': 'З України'
   },
   about_tab_2: {
     'eng': 'Experience',
@@ -386,7 +441,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1667172012602
+      // 1667405726165
       var cssReload = __webpack_require__(/*! ../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -509,7 +564,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("62f10b979638ea077b2a")
+/******/ 		__webpack_require__.h = () => ("6755f93e39d321838ad6")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
