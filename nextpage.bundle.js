@@ -88,7 +88,7 @@ const langArr = {
     'eng': `Hi. My name is Anton Hai. I am 39 years old and I decided to change my life and become a web developer. 
         <br />"Starting life from scratch" is a very romanticized concept, but in fact, I had to put in a lot of effort to achieve
          the result.
-        If you choose me as a programmer for your project or company, you will get an employee who knows how to achieve goals, is easily trained, has experience in various industries and professions. Download your resume in the contacts section.`,
+        If you choose me as a programmer for your project or company, you will get an employee who knows how to achieve goals, is easily trained, has experience in various industries and professions. Download my resume in the contacts section.`,
     'ukr': `Вітання. Мене звуть Антон Гай. Мені 39 років і я вирішив змінити своє життя та стати веб-розробником.<br /> "Почати життя з нуля" дуже романтизоване поняття, але насправді мені довелося докласти маси зусиль, щоб досягти результату.
         Якщо ви оберете мене, як програміста, для свого проекту або компанії, ви отримаєте співробітника, який вміє досягати поставленої мети, легко навчаємо, має досвід роботи в різних галузях та професіях. Завантажуйте резюме у розділі контакти.`
   },
@@ -296,7 +296,7 @@ module.exports = langArr;
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("6755f93e39d321838ad6")
+/******/ 		__webpack_require__.h = () => ("d581a5f0cdb69d8bbc7e")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
